@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Recommender</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://www.google.com/search?q=https://fonts.googleapis.com">
+<link rel="preconnect" href="https://www.google.com/search?q=https://fonts.gstatic.com" crossorigin>
+<link href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DInter:wght%40400%3B600%3B700%26display%3Dswap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h1>Recipe Recommender</h1>
+<p>Enter ingredients to find delicious recipes!</p>
+<div class="search-container">
+<input type="text" id="ingredients-input" placeholder="Enter ingredients (e.g., rice, chicken, vegetables)">
+<button id="search-button">Search Recipes</button>
+</div>
+
+    <div id="loading-spinner" class="hidden"></div>
+    <div id="error-message" class="error-message hidden"></div>
+    
+    <div id="recipes-list">
+        <!-- Recipes will be displayed here -->
+    </div>
+</div>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
